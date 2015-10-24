@@ -20,15 +20,20 @@
 
     <section class="main-content">
       <h2>
-<a id="san-fransisco-international-sfo-traffic-explorer" class="anchor" href="#san-fransisco-international-sfo-traffic-explorer" aria-hidden="true"><span class="octicon octicon-link"></span></a>San Fransisco International (SFO) Traffic Explorer</h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<p>This Shiny App is for searching and visulizating San Fransisco International Monthly Traffic information from  7/2015 Through end 6/2015. 
-The total number of set records is 13901.
-The datasets is from <a href="http://www.flysfo.com/media/facts-statistics/air-traffic-statistics">flysfo.com/</a> that contains the datasets.</p>
+<ul>
+<li><p>San Francisco International Airport makes available historical monthly passenger traffic volumes</p></li>
+<li><p>Data items avaiable include are Arilines, Region of origin or destination, direction ( Arrival or Deparature)  </p></li>
+<li><p>The Data is available from July 2005 through June 2015</p></li>
+</ul>
 
-<p>How to use:</p>
+<hr>
 
-<p>The applications explores historical monthly passengers volumes that pass through SFO from  7/2015 Through end 6/2015</p>
+<h2>
+<a id="application-description" class="anchor" href="#application-description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application Description</h2>
+
+<p>The application explores historical monthly passengers volumes that pass through SFO from  7/2015 Through end 6/2015</p>
 
 <p>User can select or change: </p>
 
@@ -39,11 +44,54 @@ The datasets is from <a href="http://www.flysfo.com/media/facts-statistics/air-t
 <li>The Activities of the passengers ( Enplaned = Departure, Deplaned = Arrival, Thru/Transit = Transit)</li>
 </ol>
 
-<p>Data Source: <a href="http://www.flysfo.com/media/facts-statistics/air-traffic-statistics">http://www.flysfo.com/media/facts-statistics/air-traffic-statistics</a>  </p>
+<p>The application is hosted at the link listed below:
+<a href="https://abdoukm.shinyapps.io/Project">https://abdoukm.shinyapps.io/Project</a></p>
 
-<p>Date updated: 10/23/2015</p>
+<hr>
 
-<p>About author: (<a href="https://www.linkedin.com/in/abdoukm">https://www.linkedin.com/in/abdoukm</a>)</p>
+<h2>
+<a id="application-layout" class="anchor" href="#application-layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application Layout</h2>
+
+<p>The tool has an input panel with:</p>
+
+<p>A date range selection slider</p>
+
+<p>A passenger activity selection group of check boxes</p>
+
+<p>A region selection group of check boxes</p>
+
+<p>An airlines selection group of check boxes</p>
+
+<p>The tool has 2 output tabs  </p>
+
+<ul>
+<li>The data grid displaying the filtered result set based on the user settings in teh input panel</li>
+<li>2 Graphical Plots</li>
+</ul>
+
+<p>The tool hides ui.R and server.R code from user view. </p>
+
+<hr>
+
+<p>As the application requires a data file to read and display data, 
+the following will demonstrate embedded r code in this document </p>
+
+<h2>
+<a id="fahrenheit-celsius-calculation" class="anchor" href="#fahrenheit-celsius-calculation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fahrenheit-Celsius Calculation</h2>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-v">Farenheit</span> <span class="pl-k">=</span> (<span class="pl-smi">Celsius</span> <span class="pl-k">*</span> (<span class="pl-c1">9</span><span class="pl-k">/</span><span class="pl-c1">5</span>)) <span class="pl-k">+</span> <span class="pl-c1">32</span>
+
+
+<span class="pl-v">Celsius</span> <span class="pl-k">=</span> (<span class="pl-smi">Farenheit</span> <span class="pl-k">-</span> <span class="pl-c1">32</span>) <span class="pl-k">*</span> (<span class="pl-c1">5</span><span class="pl-k">/</span><span class="pl-c1">9</span>)</pre></div>
+
+<p>For example to calculate the temperature in Fahrenheit when the temperature in Celsius is 17 degrees. </p>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">Celsius</span><span class="pl-k">&lt;-</span><span class="pl-c1">17</span>
+<span class="pl-v">Farenheit</span> <span class="pl-k">=</span> (<span class="pl-smi">Celsius</span> <span class="pl-k">*</span> (<span class="pl-c1">9</span><span class="pl-k">/</span><span class="pl-c1">5</span>)) <span class="pl-k">+</span> <span class="pl-c1">32</span>
+<span class="pl-smi">Farenheit</span></pre></div>
+
+<pre><code>## [1] 62.6
+</code></pre>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/abdoukm/Developing-Data-Products-Project">Developing Data Products Project</a> is maintained by <a href="https://github.com/abdoukm">abdoukm</a>.</span>
